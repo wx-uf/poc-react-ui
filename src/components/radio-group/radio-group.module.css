@@ -1,0 +1,48 @@
+/* radio-group.module.css */
+
+.radioGroup {
+  display: flex;
+  flex-direction: column; /* Stack radio buttons vertically */
+  width: fit-content; /* Adjust width to fit content */
+}
+
+.radioItem {
+  display: flex; /* Use flex for label and indicator alignment */
+  align-items: center; /* Align label with the indicator */
+  cursor: pointer; /* Pointer cursor by default */
+  margin: 8px 0; /* Space between radio buttons */
+  width: auto; /* Allow radio items to take only their content width */
+}
+
+.radioItem[data-disabled] {
+  cursor: not-allowed; /* Change cursor when disabled */
+  opacity: 0.6; /* Make it look disabled */
+}
+
+.radioIndicator {
+  width: 20px; /* Size of the radio circle */
+  height: 20px; /* Size of the radio circle */
+  border: 2px solid #ccc; /* Border color for unselected state */
+  border-radius: 50%; /* Make it circular */
+  margin-right: 10px; /* Space between indicator and label */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioIndicator::after {
+  content: "";
+  width: 10px; /* Inner circle size */
+  height: 10px; /* Inner circle size */
+  border-radius: 50%;
+  background: transparent; /* Inner circle color when unchecked */
+  transition: background-color 0.2s; /* Smooth transition */
+}
+
+[data-state="checked"] .radioIndicator::after {
+  background: #4caf50; /* Color for inner circle when checked */
+}
+
+[data-state="unchecked"] .radioIndicator::after {
+  background: transparent; /* Color for inner circle when unchecked */
+}

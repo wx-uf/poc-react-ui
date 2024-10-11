@@ -1,0 +1,12 @@
+/* RadioGroup.stories.module.css */
+.my-custom-class {
+  border: 2px solid blue; /* Example border */
+  padding: 10px; /* Add some padding */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.radioItem {
+  margin: 5px 0; /* Space between radio items */
+  font-weight: bold; /* Bold font for labels */
+}

@@ -1,0 +1,66 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 4px;
+  font-weight: bold;
+  display: block; /* Ensures label takes full width */
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex; /* Use flex for alignment of elements */
+  align-items: center; /* Center vertically */
+}
+
+.input {
+  padding: 8px 32px 8px 8px; /* Padding to accommodate icon and suffix */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 100%; /* Full width */
+  transition: border-color 0.2s; /* Smooth border transition */
+}
+
+.input:focus {
+  border-color: #4caf50; /* Focus border color */
+}
+
+.input.error {
+  border-color: red; /* Red border for error state */
+}
+
+.noBorder {
+  border: none; /* No border style */
+}
+
+.bordered {
+  border: 1px solid #ccc; /* Default bordered style */
+}
+
+.icon {
+  position: absolute;
+  right: 30px; /* Space for clear button */
+  pointer-events: none;
+}
+
+.clearButton {
+  position: absolute;
+  right: 8px; /* Position of the clear button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust size as needed */
+}
+
+.suffixLabel {
+  margin-left: 8px; /* Space between input and suffix label */
+}
+
+.errorMessage {
+  color: red; /* Error message color */
+  margin-top: 4px; /* Space above error message */
+  font-size: 12px; /* Smaller font size for error message */
+}

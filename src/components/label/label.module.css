@@ -1,0 +1,13 @@
+.labelContainer {
+  display: flex;
+  flex-direction: column; /* Stack label and sub-label */
+}
+
+.label {
+  font-size: 16px; /* Main label font size */
+}
+
+.subLabel {
+  font-size: 14px;
+  color: gray;
+}

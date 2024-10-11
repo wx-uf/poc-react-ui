@@ -1,0 +1,11 @@
+.my-custom-class {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  padding: 20px;
+  border-radius: 8px;
+
+  button {
+    margin: 0 4px;
+    background-color: #007bff;
+  }
+}

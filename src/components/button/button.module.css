@@ -1,0 +1,44 @@
+/* button.module.css */
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.primary {
+  background-color: blue;
+  color: white;
+}
+
+.primary:hover {
+  background-color: darkblue;
+}
+
+.secondary {
+  background-color: gray;
+  color: white;
+}
+
+.secondary:hover {
+  background-color: darkgray;
+}
+
+.link {
+  background-color: transparent;
+  color: blue;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: darkblue;
+}
+
+.disabled {
+  background-color: lightgray;
+  color: darkgray;
+  cursor: not-allowed;
+  pointer-events: none; /* Prevent interaction when disabled */
+}
