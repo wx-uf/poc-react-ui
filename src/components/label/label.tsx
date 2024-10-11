@@ -1,9 +1,9 @@
-import * as RadixLabel from '@radix-ui/react-label';
-import classNames from 'classnames';
-import styles from './label.module.css';
-import { CustomLabelProps } from './type';
+import * as RadixLabel from "@radix-ui/react-label";
+import classNames from "classnames";
+import styles from "./label.module.css";
+import { CustomLabelProps } from "./type";
 
-const CustomLabel: React.FC<CustomLabelProps> = ({
+const Label: React.FC<CustomLabelProps> = ({
   label,
   subLabel,
   htmlFor,
@@ -14,7 +14,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({
     <div
       className={classNames(styles.labelContainer, className)}
       id={otherProps.id}
-      data-testid={otherProps['data-testid']}
+      data-testid={otherProps["data-testid"]}
       style={otherProps.style}
     >
       <RadixLabel.Root htmlFor={htmlFor} className={styles.label}>
@@ -25,4 +25,4 @@ const CustomLabel: React.FC<CustomLabelProps> = ({
   );
 };
 
-export default CustomLabel;
+export default Label;
