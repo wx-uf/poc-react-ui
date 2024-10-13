@@ -1,0 +1,10 @@
+# Ignore unnecessary files and directories
+.storybook
+src
+stories
+.eslintrc.js
+.gitignore
+.prettierrc
+rollup.config.js
+tsconfig.json
+package-lock.json
