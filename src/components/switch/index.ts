@@ -1,2 +1,4 @@
+import Switch from "./switch";
+
 export * from "./type";
-export { default as Switch } from "./switch";
+export default Switch;

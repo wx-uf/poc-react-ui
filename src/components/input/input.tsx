@@ -1,19 +1,19 @@
-import classNames from 'classnames';
-import { ChangeEvent } from 'react';
-import { Label } from '../label';
-import styles from './input.module.css';
-import { CustomInputProps } from './type';
+import classNames from "classnames";
+import React, { ChangeEvent } from "react";
+import Label from "../label"; // Use absolute path
+import styles from "./input.module.css";
+import { CustomInputProps } from "./type";
 
 const Input: React.FC<CustomInputProps> = ({
   label,
   htmlFor,
-  type = 'text',
+  type = "text",
   value,
   onChange,
   className,
   rightIcon,
   error,
-  styleType = 'bordered',
+  styleType = "bordered",
   onClear,
   errorMessage,
   suffixLabel,
@@ -27,7 +27,7 @@ const Input: React.FC<CustomInputProps> = ({
     }
 
     if (onChange) {
-      onChange({ target: { value: '' } } as ChangeEvent<HTMLInputElement>); // Clear input value
+      onChange({ target: { value: "" } } as ChangeEvent<HTMLInputElement>); // Clear input value
     }
   };
 
@@ -36,7 +36,7 @@ const Input: React.FC<CustomInputProps> = ({
       className={classNames(styles.inputContainer, className)}
       style={style}
       id={otherProps.id}
-      data-testid={otherProps['data-testid']}
+      data-testid={otherProps["data-testid"]}
     >
       {label && (
         <Label htmlFor={htmlFor} className={styles.label} label={label} />
@@ -51,8 +51,8 @@ const Input: React.FC<CustomInputProps> = ({
           placeholder={placeholder}
           className={classNames(styles.input, {
             [styles.error]: error,
-            [styles.noBorder]: styleType === 'no-border',
-            [styles.bordered]: styleType === 'bordered',
+            [styles.noBorder]: styleType === "no-border",
+            [styles.bordered]: styleType === "bordered",
           })}
           aria-invalid={error}
           aria-describedby={error ? `${htmlFor}-error` : undefined} // Associate error message

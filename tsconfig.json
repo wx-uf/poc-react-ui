@@ -1,22 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "esnext",
-    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationDir": "./types",
+    "outDir": "./dist",
+    "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "src",
-    "paths": {
-      "*": ["node_modules/*", "src/*"]
-    },
     "moduleResolution": "node",
-    "declaration": true,
-    "declarationDir": "dist",
-    "outDir": "dist",
-    "sourceMap": true
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"]
+    }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "stories"]
+  "include": ["src", "css.d.ts"]
 }

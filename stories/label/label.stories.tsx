@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from "@storybook/react";
 import React from "react";
-import { CustomLabelProps, Label } from "../../src/components/label";
+import Label, { CustomLabelProps } from "../../src/components/label";
 
 export default {
   title: "Form/Label",

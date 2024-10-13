@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-
 import { Meta, StoryFn } from "@storybook/react";
-import {
-  RadioGroup,
+import React, { useState } from "react";
+import RadioGroup, {
   CustomRadioGroupProps,
 } from "../../src/components/radio-group";
 import styles from "./radio-group.stories.module.css";
+
 export default {
   title: "Form/RadioGroup",
   component: RadioGroup,

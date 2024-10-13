@@ -1,5 +1,6 @@
 import * as RadixLabel from "@radix-ui/react-label";
 import classNames from "classnames";
+import React from "react";
 import styles from "./label.module.css";
 import { CustomLabelProps } from "./type";
 

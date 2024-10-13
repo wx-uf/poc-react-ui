@@ -1,2 +1,4 @@
+import Input from "./input";
+
 export * from "./type";
-export { default as Input } from "./input";
+export default Input;

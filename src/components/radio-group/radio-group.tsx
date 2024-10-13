@@ -1,10 +1,19 @@
-'use client';
+import * as RadixRadioGroup from "@radix-ui/react-radio-group";
+import { RadioGroupProps } from "@radix-ui/react-radio-group";
+import classNames from "classnames";
+import React from "react";
+import styles from "./radio-group.module.css";
 
-import * as RadixRadioGroup from '@radix-ui/react-radio-group';
-import classNames from 'classnames';
-import React from 'react';
-import styles from './radio-group.module.css';
-import { CustomRadioGroupProps } from './type';
+interface CustomRadioGroupProps extends RadioGroupProps {
+  options: { value: string; label: string }[];
+  selectedValue: string;
+  className?: string;
+  disabled?: boolean;
+  required?: boolean;
+  style?: React.CSSProperties | undefined;
+  id?: string | undefined;
+  "data-testid"?: string | undefined;
+}
 
 const RadioGroup: React.FC<CustomRadioGroupProps> = ({
   options,
@@ -32,7 +41,7 @@ const RadioGroup: React.FC<CustomRadioGroupProps> = ({
           disabled={disabled}
           required={required}
           className={styles.radioItem}
-          data-state={selectedValue === option.value ? 'checked' : 'unchecked'}
+          data-state={selectedValue === option.value ? "checked" : "unchecked"}
           data-disabled={disabled ? true : undefined}
         >
           <span className={styles.radioIndicator} />

@@ -1,2 +1,4 @@
+import Button from "./button";
+
 export * from "./type";
-export { default as Button } from "./button";
+export default Button;

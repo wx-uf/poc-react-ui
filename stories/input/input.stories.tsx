@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Input, CustomInputProps } from "../../src/components/input"; // Adjust the path as necessary
 import { Meta, StoryFn } from "@storybook/react";
+import React, { useState } from "react";
+import Input, { CustomInputProps } from "../../src/components/input"; // Adjust the path as necessary
 
 export default {
   title: "Form/Input",

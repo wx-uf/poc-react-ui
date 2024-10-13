@@ -1,4 +1,6 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
+import path from "path";
+
 const config = {
   stories: [
     "../stories/**/*.mdx",
@@ -15,13 +17,15 @@ const config = {
     name: "@storybook/react-vite",
     options: {},
   },
-  webpackFinal: async (config) => {
-    // Add rules for handling CSS modules
-    config.module.rules.push({
-      test: /\.module\.css$/,
-      use: ["style-loader", "css-loader?modules"],
-    });
-    return config;
+  async viteFinal(currentConfig) {
+    return {
+      ...currentConfig,
+      resolve: {
+        alias: {
+          components: path.resolve(__dirname, "../src/components"),
+        },
+      },
+    };
   },
 };
 

@@ -1,2 +1,4 @@
+import Label from "./label";
+
 export * from "./type";
-export { default as Label } from "./label";
+export default Label;

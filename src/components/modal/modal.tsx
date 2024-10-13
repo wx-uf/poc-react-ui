@@ -1,7 +1,8 @@
-import * as Dialog from '@radix-ui/react-dialog';
-import classNames from 'classnames';
-import styles from './modal.module.css';
-import { CustomModalProps } from './type';
+import * as Dialog from "@radix-ui/react-dialog";
+import classNames from "classnames";
+import React from "react";
+import styles from "./modal.module.css";
+import { CustomModalProps } from "./type";
 
 const Modal: React.FC<CustomModalProps> = ({
   open,
@@ -16,7 +17,7 @@ const Modal: React.FC<CustomModalProps> = ({
     <Dialog.Root
       open={open}
       onOpenChange={onOpenChange}
-      data-state={open ? 'open' : 'closed'}
+      data-state={open ? "open" : "closed"}
     >
       <Dialog.Overlay className={styles.overlay} />
       <Dialog.Content

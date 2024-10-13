@@ -1,8 +1,9 @@
 // Switch.stories.tsx
-import React, { useState } from "react";
+import { useState } from "react";
 
-import { CustomSwitchProps, Switch } from "../../src/components/switch";
 import { Meta, StoryFn } from "@storybook/react";
+import React from "react";
+import Switch, { CustomSwitchProps } from "../../src/components/switch";
 
 export default {
   title: "Atoms/Switch",
@@ -43,7 +44,7 @@ Disabled.args = {
   label: "Disabled Switch",
   labelPosition: "left",
   checked: false,
-  disabled: true, // Ensure you handle the disabled prop in your Switch component
+  disabled: true,
 };
 
 // Label on the right
